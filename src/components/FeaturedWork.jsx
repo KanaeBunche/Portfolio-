@@ -43,7 +43,7 @@ export default function FeaturedWork() {
 
                     <a
                         className="work-link"
-                        href="https://fordham.edu"
+                        href="https://www.loom.com/share/1f335e36b83e4037a82870195559750e"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
