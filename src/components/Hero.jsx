@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import FeaturedWork from "./Featured";
+import FeaturedWork from "./FeaturedWork";
 import "./Hero.css";
 import avatarImg from "../assets/avatar.png";
 import PortfolioChat from "./PortfolioChat";

@@ -262,15 +262,21 @@ body {
 /* GLOW BEHIND AVATAR */
 .avatar-circle {
     position: absolute;
-    width: 90%;
-    height: 90%;
-    background: radial-gradient(circle, rgba(20, 241, 200, 0.55), rgba(20, 241, 200, 0.15), transparent);
-    border-radius: 50%;
-    top: 18%;
-    left: 5%;
+    width: 115%;
+    height: 115%;
+    background: radial-gradient(circle,
+            rgba(20, 241, 200, 0.75),
+            rgba(20, 241, 200, 0.35),
+            rgba(20, 241, 200, 0.1),
+            transparent);
 
-    filter: blur(35px);
+    border-radius: 50%;
+    top: 10%;
+    left: -5%;
+
+    filter: blur(55px);
     animation: glowPulse 4s ease-in-out infinite;
+
     z-index: 1;
 }
 
@@ -294,14 +300,13 @@ body {
     }
 
     50% {
-        transform: translateY(-14px) scale(1.02);
+        transform: translateY(-28px) scale(1.04);
     }
 
     100% {
         transform: translateY(0px) scale(1);
     }
 }
-
 /* GLOW PULSE */
 @keyframes glowPulse {
     0% {
