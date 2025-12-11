@@ -1,11 +1,13 @@
 import { useEffect } from "react";
+import FeaturedWork from "./Featuredwork";
 import "./Hero.css";
 import avatarImg from "../assets/avatar.png";
 import PortfolioChat from "./PortfolioChat";
-import FeaturedWork from "./FeaturedWork";
+
 import Resume from "./Resume";
 import gsap from "gsap";
 window.gsap = gsap;
+
 
 
 export default function Hero() {
