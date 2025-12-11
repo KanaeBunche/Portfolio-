@@ -1,0 +1,401 @@
+/* ---------------------- */
+/* GLOBAL + BACKGROUND    */
+/* ---------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0b0f17;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* ---------------------- */
+/* HERO SECTION           */
+/* ---------------------- */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 10vw;
+
+    background: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* ---------------------- */
+/* HERO INNER LAYOUT      */
+/* ---------------------- */
+
+.hero-inner {
+    display: flex;
+    flex-direction: row;
+    /* ← horizontal on desktop */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* ---------------------- */
+/* TEXT SECTION           */
+/* ---------------------- */
+
+.hero-pill {
+    background: rgba(20, 241, 200, 0.15);
+    border: 1px solid rgba(20, 241, 200, 0.4);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #14f1c8;
+}
+
+.hero-title {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.hero-name {
+    color: #14f1c8;
+}
+
+.hero-subtext {
+    max-width: 600px;
+    color: #d6e2f0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.btn {
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: #14f1c8;
+    color: #0b0f17;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tech-tags span {
+    padding: 0.45rem 0.9rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+
+/* ---------------------------- */
+/* ANIMATED LINE GRID BACKGROUND */
+/* ---------------------------- */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    /* Grid lines */
+    background:
+        linear-gradient(transparent 95%, rgba(255, 255, 255, 0.08) 100%) 0 0 / 100% 40px,
+        linear-gradient(90deg, transparent 95%, rgba(255, 255, 255, 0.08) 100%) 0 0 / 40px 100%;
+
+    opacity: 0.15;
+
+    animation: gridMove 18s linear infinite;
+}
+
+/* Smooth drift animation */
+@keyframes gridMove {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 0 200px, 200px 0;
+    }
+}
+/* ---------------------- */
+/* BACKGROUND ORBS        */
+/* ---------------------- */
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.22;
+    z-index: 0;
+    animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb-purple {
+    width: 450px;
+    height: 450px;
+    background: rgba(128, 90, 255, 0.4);
+    top: -140px;
+    left: -160px;
+}
+
+.orb-teal {
+    width: 350px;
+    height: 350px;
+    background: rgba(20, 241, 200, 0.35);
+    bottom: -140px;
+    right: -140px;
+}
+
+@keyframes orbFloat {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, -40px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* ---------------------- */
+/* REMOVE FLOATING LOGOS  */
+/* ---------------------- */
+
+.floating-icons,
+.tech-icon {
+    display: none !important;
+    /* ← removes background logos COMPLETELY */
+}
+
+/* ---------------------------- */
+/* 📱 MOBILE FIX (max-width: 900px) */
+/* ---------------------------- */
+
+@media (max-width: 900px) {
+    .hero-inner {
+        flex-direction: column;
+        /* ← vertical ONLY on small screens */
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtext {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tech-tags {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+    }
+}
+/* AVATAR SECTION */
+
+
+/* AVATAR POSITIONING */
+.avatar-wrap {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    z-index: 10;
+
+    /* EXTRA ADJUSTMENT toward the text */
+    transform: translateX(-20px);
+    /* tweak between -10px to -60px */
+}
+/* RIGHT COLUMN — move whole avatar block left */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* MOVE ENTIRE AVATAR + GLOW LEFT */
+    margin-left: -20rem;
+    /* adjust as needed: -2rem = subtle, -6rem = closer */
+}
+
+/* GLOW BEHIND AVATAR */
+.avatar-circle {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(20, 241, 200, 0.55), rgba(20, 241, 200, 0.15), transparent);
+    border-radius: 50%;
+    top: 18%;
+    left: 5%;
+
+    filter: blur(35px);
+    animation: glowPulse 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* AVATAR IMAGE */
+.avatar-img {
+    width: 120%;
+    height: auto;
+    position: absolute;
+    top: -8%;
+    left: -5%;
+    z-index: 2;
+
+    /* stronger floating motion */
+    animation: floatAvatar 6s ease-in-out infinite;
+}
+
+/* FLOATING EFFECT */
+@keyframes floatAvatar {
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-14px) scale(1.02);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+/* GLOW PULSE */
+@keyframes glowPulse {
+    0% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.06);
+    }
+
+    100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+}
+
+/* ---------------------------------------- */
+/* ELECTRIC INTERACTIVE GRID BACKGROUND     */
+/* ---------------------------------------- */
+/* -------------------------------------------------- */
+/* ⚡ ELECTRIC INTERACTIVE GRID BACKGROUND (B2 effect) */
+.mesh-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 5;
+}
+/* ------------------------------- */
+/* HERO STACK LAYOUT */
+/* ------------------------------- */
+
+.hero-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* TOP ROW (TITLE + AVATAR) */
+.hero-main-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.portfolio-chat-card {
+   
+    /* ✅ stretch */
+   
+    /* ✅ LONG (adjust 1200–1400 as you like) */
+
+    padding: 1.6rem 2.8rem;
+    /* ✅ horizontal emphasis */
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    text-align: center;
+}
+.hero-chat-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    /* ✅ ignore avatar offset */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 2rem;
+    z-index: 5;
+}
+
+.hero-resume {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* ✅ ACTUAL CENTER */
+    margin-top: 3rem;
+}
