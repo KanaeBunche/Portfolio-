@@ -55,12 +55,12 @@ export default function Resume() {
 
         {/* GITHUB */}
         <a
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            href="https://github.com/KanaeBunche"
             target="_blank"
             rel="noopener noreferrer"
         >
             <img
-                src="https://github.com/KanaeBunche"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                 alt="GitHub"
             />
         </a>
