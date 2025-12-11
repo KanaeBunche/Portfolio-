@@ -60,7 +60,7 @@ export default function Resume() {
             rel="noopener noreferrer"
         >
             <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                src="https://github.com/KanaeBunche"
                 alt="GitHub"
             />
         </a>
