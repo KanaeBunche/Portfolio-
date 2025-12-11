@@ -184,7 +184,6 @@ export default function Hero() {
                         <div className="hero-buttons">
                             <a href="#projects" className="btn btn-primary">View my projects</a>
                             <a href="#resume" className="btn btn-outline">Let's work together</a>
-                            <a href="#resume" className="btn btn-outline">Resume</a>
                         </div>
 
                         <div className="tech-tags">
