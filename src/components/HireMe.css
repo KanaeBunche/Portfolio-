@@ -1,0 +1,164 @@
+.hire-section {
+    width: 100%;
+    padding: 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hire-header {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hire-header p {
+    color: #c8dce6;
+    margin-top: 0.6rem;
+}
+
+/* Tree container */
+.hire-tree {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+/* Center line */
+.hire-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Node wrapper */
+.hire-node {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: start;
+}
+
+.hire-node.left .hire-card {
+    grid-column: 1;
+    justify-self: end;
+}
+
+.hire-node.right .hire-card {
+    grid-column: 3;
+    justify-self: start;
+}
+
+/* Dot */
+.hire-dot {
+    grid-column: 2;
+    justify-self: center;
+    margin-top: 1.2rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(20, 241, 200, 0.95);
+    box-shadow: 0 0 18px rgba(20, 241, 200, 0.55);
+}
+
+/* Card */
+.hire-card {
+    width: min(460px, 100%);
+    padding: 1.4rem 1.5rem;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hire-card h3 {
+    margin: 0 0 0.8rem;
+}
+
+.hire-card p,
+.hire-card li {
+    color: #c8dce6;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.hire-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.hire-mini {
+    margin-top: 0.7rem;
+}
+
+/* Pills */
+.hire-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.hire-pills span {
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0.88rem;
+}
+
+/* CTA buttons */
+.hire-cta {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+}
+
+.hire-btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border-radius: 999px;
+    background: #14f1c8;
+    color: #0b0f17;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hire-btn.outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Mobile: stack cards on one side and move line left */
+@media (max-width: 900px) {
+    .hire-line {
+        left: 18px;
+        transform: none;
+    }
+
+    .hire-node {
+        grid-template-columns: 36px 1fr;
+        gap: 1rem;
+    }
+
+    .hire-dot {
+        grid-column: 1;
+        justify-self: center;
+        margin-top: 1.3rem;
+    }
+
+    .hire-card {
+        grid-column: 2 !important;
+        justify-self: stretch !important;
+        width: 100%;
+    }
+}

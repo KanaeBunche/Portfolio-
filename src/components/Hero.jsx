@@ -3,10 +3,11 @@ import FeaturedWork from "./FeaturedWork";
 import "./Hero.css";
 import avatarImg from "../assets/avatar.png";
 import PortfolioChat from "./PortfolioChat";
-
 import Resume from "./Resume";
+import HireMe from "./HireMe";   // ← ADD THIS
 import gsap from "gsap";
 window.gsap = gsap;
+
 
 
 
@@ -183,7 +184,9 @@ export default function Hero() {
 
                         <div className="hero-buttons">
                             <a href="#projects" className="btn btn-primary">View my projects</a>
-                            <a href="#resume" className="btn btn-outline">Let's work together</a>
+                            <a href="#resume" className="btn btn-outline">Resume</a>
+                            <a href="#hire" className="btn btn-outline">Hire Me</a>
+
                         </div>
 
                         <div className="tech-tags">
@@ -191,6 +194,10 @@ export default function Hero() {
                             <span>Node.js</span>
                             <span>PostgreSQL</span>
                             <span>JavaScript</span>
+                            <span>Flask</span>
+                            <span>Next.js</span>
+                            <span>Prisma</span>
+                            <span>HTML/CSS</span>
                         </div>
                     </div>
 
@@ -209,6 +216,10 @@ export default function Hero() {
                 <div id="projects">
               <FeaturedWork/>
                 </div>
+                <a href="#hire" className="btn btn-outline">
+                    <HireMe/>
+                </a>
+
                 <div className="hero-resume" id="resume" >
                     <Resume/>
                 </div>

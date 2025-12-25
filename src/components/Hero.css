@@ -245,7 +245,7 @@ body {
     z-index: 10;
 
     /* EXTRA ADJUSTMENT toward the text */
-    transform: translateX(-20px);
+    
     /* tweak between -10px to -60px */
 }
 /* RIGHT COLUMN — move whole avatar block left */
@@ -255,7 +255,7 @@ body {
     align-items: center;
 
     /* MOVE ENTIRE AVATAR + GLOW LEFT */
-    margin-left: -20rem;
+    
     /* adjust as needed: -2rem = subtle, -6rem = closer */
 }
 
@@ -403,4 +403,69 @@ body {
     justify-content: center;
     /* ✅ ACTUAL CENTER */
     margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 3rem 1.2rem;
+    }
+
+    .hero-main-row {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .right-column,
+    .avatar-wrap,
+    .portfolio-chat-section {
+        margin-left: 0 !important;
+        transform: none !important;
+    }
+
+    .avatar-wrap {
+        width: 260px;
+        height: 260px;
+    }
+
+    .avatar-img {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtext {
+        font-size: 1rem;
+        max-width: 100%;
+        margin: 0.8rem auto 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tech-tags {
+        justify-content: center;
+        gap: 0.5rem;
+    }
 }
